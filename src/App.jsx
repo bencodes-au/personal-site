@@ -3,6 +3,8 @@ import { ProjectCard } from "./components/ProjectCard";
 import digitalPortrait from "./assets/digitalPortrait.png";
 import touring from "./assets/touring.png";
 import dog from "./assets/dog.png";
+import helloWorld from "./assets/helloWorld.png";
+import logo from "./assets/logo.png";
 
 export function App() {
   const projects = [
@@ -33,11 +35,11 @@ export function App() {
     },
     {
       title: "Tech Skills",
-      image: digitalPortrait,
+      image: helloWorld,
       links: [
         {
           url: "https://github.com/bencodes-au/",
-          label: "Check Out My Work",
+          label: "My Work",
           iconName: "github",
         },
       ],
@@ -64,7 +66,7 @@ export function App() {
     },
     {
       title: "bencodes.au",
-      image: digitalPortrait,
+      image: logo,
       links: [
         {
           url: "https://github.com/bencodes-au/personal-site",
