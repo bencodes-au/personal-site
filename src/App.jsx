@@ -7,6 +7,8 @@ import touring from "./assets/touring.png";
 import dog from "./assets/dog.png";
 import helloWorld from "./assets/helloWorld.png";
 import logo from "./assets/logo.png";
+import { DisplayCard } from "./components/DisplayCard";
+import { ButtonIcon } from "./components/ButtonIcon";
 
 const projects = [
   {
@@ -82,11 +84,6 @@ const projects = [
     image: touring,
     links: [
       {
-        url: "https://touringartist.netlify.app/",
-        label: "Touring Artist",
-        iconName: "guitar",
-      },
-      {
         url: "https://github.com/bencodes-au/Touring-Artist-Front-End",
         label: "Front End",
         iconName: "github",
@@ -97,8 +94,22 @@ const projects = [
         iconName: "github",
       },
     ],
-    description:
-      "Touring Artist is a booking app for artists looking for music venues. It is a Full Stack MERN project.",
+    description: (
+      <div className=" flex flex-col gap-6 items-center justify-center">
+        <p>
+          Touring Artist is a booking app for artists looking for music venues.
+          It is a Full Stack MERN project.
+        </p>
+        <a
+          href={"https://touringartist.netlify.app/"}
+          target="_blank"
+          className="btn btn-primary text-lg"
+        >
+          <ButtonIcon iconName={"guitar"} />
+          See it live!
+        </a>
+      </div>
+    ),
   },
 ];
 
@@ -115,11 +126,10 @@ export function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="overflow-y-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full px-4 sm:px-8 xl:px-16 pt-4">
+      <div className="overflow-y-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full">
         {projects.map((project, index) =>
           isMobile ? (
             <ProjectCard
-              key={index}
               title={project.title}
               image={project.image}
               links={project.links}
@@ -127,14 +137,29 @@ export function App() {
               {project.description}
             </ProjectCard>
           ) : (
-            <FlippableCard key={index} title={project.title}>
-              <ProjectCard
+            <FlippableCard
+              key={index}
+              title={project.title}
+              image={project.image}
+            >
+              <DisplayCard
+                key={index}
                 title={project.title}
-                image={project.image}
-                links={project.links}
+                image={<img src={project.image} alt={project.title} />}
+                actions={project.links?.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    className="btn btn-primary text-lg"
+                  >
+                    {link?.iconName && <ButtonIcon iconName={link.iconName} />}
+                    {link.label}
+                  </a>
+                ))}
               >
                 {project.description}
-              </ProjectCard>
+              </DisplayCard>
             </FlippableCard>
           )
         )}

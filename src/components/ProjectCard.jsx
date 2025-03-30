@@ -1,7 +1,7 @@
 import { ButtonIcon } from "./ButtonIcon";
 export function ProjectCard({ title, image, children, links }) {
   return (
-    <div className="card bg-base-300 shadow-lg flex flex-col w-full p-6">
+    <div className="card bg-base-300 shadow-lg flex flex-col w-full p-6 rounded-none">
       {/* Title */}
       <h2 className="card-title mb-4 text-2xl font-bold">{title}</h2>
 
