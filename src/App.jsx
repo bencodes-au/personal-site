@@ -118,22 +118,25 @@ const projects = [
 ];
 
 export function App() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    const updateSize = () => setScreenSize(window.innerWidth);
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
   }, []);
+
+  // Ensure tablets (even those at 1024px) show ProjectCard
+  const isMobileOrTablet = screenSize <= 1080;
 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <div className="overflow-y-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full">
         {projects.map((project, index) =>
-          isMobile ? (
+          isMobileOrTablet ? (
             <ProjectCard
+              key={index}
               title={project.title}
               image={project.image}
               links={project.links}
@@ -147,7 +150,6 @@ export function App() {
               image={project.image}
             >
               <DisplayCard
-                key={index}
                 title={project.title}
                 image={<img src={project.image} alt={project.title} />}
                 actions={project.links?.map((link) => (
