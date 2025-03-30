@@ -6,14 +6,15 @@ import digitalPortrait from "./assets/digitalPortrait.png";
 import touring from "./assets/touring.png";
 import dog from "./assets/dog.png";
 import helloWorld from "./assets/helloWorld.png";
-import logo from "./assets/logo.png";
+import door from "./assets/door.png";
+import book from "./assets/book.png";
 import { DisplayCard } from "./components/DisplayCard";
 import { ButtonIcon } from "./components/ButtonIcon";
 
 const projects = [
   {
     title: "Welcome",
-    image: digitalPortrait,
+    image: door,
     links: [
       {
         url: "https://linkedin.com/in/bencodes-au/",
@@ -36,19 +37,6 @@ const projects = [
       "I started my coding journey because I love seeing my ideas come to life. I am currently finishing my Diploma of Web Development at Coder Academy. When I'm not coding I spend my time playing music, creatively writing, tabletop gaming and chasing my dog around.",
   },
   {
-    title: "Tech Skills",
-    image: helloWorld,
-    links: [
-      {
-        url: "https://github.com/bencodes-au/",
-        label: "My Work",
-        iconName: "github",
-      },
-    ],
-    description:
-      "I have experience working with Javascript, React, Express, Python, Flask, PostgreSQL, MongoDB and others. I am currently bouncing between projects trying to find what I like most, but tech is an infinite well of possibilities, and I've got lots left to try.",
-  },
-  {
     title: "Contact Me",
     image: digitalPortrait,
     links: [
@@ -67,8 +55,21 @@ const projects = [
       "I'm available on any of these platforms. If you're here for a career opportunity in Melbourne, I'm looking right now. I'd love to hear from you:",
   },
   {
+    title: "Tech Skills",
+    image: helloWorld,
+    links: [
+      {
+        url: "https://github.com/bencodes-au/",
+        label: "My Work",
+        iconName: "github",
+      },
+    ],
+    description:
+      "I have experience working with Javascript, React, Express, Python, Flask, PostgreSQL, MongoDB and others. I am currently bouncing between projects trying to find what I like most, but tech is an infinite well of possibilities, and I've got lots left to try.",
+  },
+  {
     title: "bencodes.au",
-    image: logo,
+    image: book,
     links: [
       {
         url: "https://github.com/bencodes-au/personal-site",
@@ -98,7 +99,10 @@ const projects = [
       <div className=" flex flex-col gap-6 items-center justify-center">
         <p>
           Touring Artist is a booking app for artists looking for music venues.
-          It is a Full Stack MERN project.
+          It is a Full Stack MERN project I designed and built from scratch. The
+          server and client work together without errors, it has authentication
+          processes and it's styled to integrate seamlessly at all resolutions.
+          I'm very proud of it.
         </p>
         <a
           href={"https://touringartist.netlify.app/"}
