@@ -5,9 +5,8 @@ export function Header() {
   return (
     <div className="sticky bg-base-300 top-0 z-10 px-6 py-4 shadow-md">
       <div className="flex justify-between items-center flex-wrap">
-        <span className="text-3xl font-bold w-full sm:w-auto">BenCodesAu</span>
+        <span className="text-xl font-bold w-full sm:w-auto">BenCodesAu</span>
 
-        {/* Flex container for theme toggle and icons */}
         <div className="flex items-center space-x-6 flex-wrap justify-end w-full sm:w-auto">
           <ThemeToggle />
           <a

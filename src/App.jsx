@@ -14,7 +14,7 @@ const projects = [
     image: digitalPortrait,
     links: [
       {
-        url: "linkedin.com/in/bencodes-au/",
+        url: "https://linkedin.com/in/bencodes-au/",
         label: "LinkedIn",
         iconName: "linkedIn",
       },
@@ -51,7 +51,7 @@ const projects = [
     image: digitalPortrait,
     links: [
       {
-        url: "linkedin.com/in/bencodes-au/",
+        url: "https://linkedin.com/in/bencodes-au/",
         label: "LinkedIn",
         iconName: "linkedIn",
       },
