@@ -10,7 +10,7 @@ export default function FlippableCard({ title, children, image }) {
       onMouseLeave={() => window.innerWidth >= 1024 && setIsHovered(false)}
     >
       <div
-        style={{ backgroundImage: `url(${image})` }} // Directly using the image URL here
+        style={{ backgroundImage: `url(${image})` }}
         className={`absolute inset-0 flex flex-col justify-end bg-cover bg-center items-end shadow-lg p-6 transition-opacity duration-300 ${
           isHovered ? "opacity-0" : "opacity-100"
         }`}

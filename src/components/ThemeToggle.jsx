@@ -35,7 +35,6 @@ export const ThemeToggle = () => {
       ) : (
         <FaSun className="w-6 h-6 text-yellow-400" />
       )}
-      {/* <span>{theme === "gorman-light" ? "Dark Mode" : "Light Mode"}</span> */}
     </button>
   );
 };
