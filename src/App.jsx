@@ -8,6 +8,7 @@ import dog from "./assets/dog.png";
 import helloWorld from "./assets/helloWorld.png";
 import door from "./assets/door.png";
 import book from "./assets/book.png";
+import cloud from "./assets/cloud.png";
 import { DisplayCard } from "./components/DisplayCard";
 import { ButtonIcon } from "./components/ButtonIcon";
 
@@ -114,6 +115,19 @@ const projects = [
         </a>
       </div>
     ),
+  },
+  {
+    title: "CI-CD and Cloud",
+    image: cloud,
+    links: [
+      {
+        url: "https://github.com/bencodes-au/Protected-Route-Prototype/tree/main",
+        label: "Prototype",
+        iconName: "github",
+      },
+    ],
+    description:
+      "This is a ci-cd pipeline I built using Docker, Github Actions and AWS for a basic prototype app. It has a full automated workflow and test suite launched from the user deploying to main. ",
   },
 ];
 
