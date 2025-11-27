@@ -9,6 +9,7 @@ import helloWorld from "./assets/helloWorld.png";
 import door from "./assets/door.png";
 import book from "./assets/book.png";
 import cloud from "./assets/cloud.png";
+import intern from "./assets/intern.png";
 import { DisplayCard } from "./components/DisplayCard";
 import { ButtonIcon } from "./components/ButtonIcon";
 
@@ -67,6 +68,12 @@ const projects = [
     ],
     description:
       "I have experience working with Javascript, React, Express, Python, Flask, PostgreSQL, MongoDB and others. I am currently bouncing between projects trying to find what I like most, but tech is an infinite well of possibilities, and I've got lots left to try.",
+  },
+  {
+    title: "Internship",
+    image: intern,
+    description:
+      "I completed my internship at Labrys, a web consultancy specialising in Web3 and Blockchain. We learnt about Typescript and NextJS which we used to build a social media application where I built the User and Post functionality. ",
   },
   {
     title: "bencodes.au",
